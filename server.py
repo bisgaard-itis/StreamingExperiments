@@ -11,7 +11,7 @@ app = FastAPI()
 async def _generator() -> AsyncIterable[str]:
     for ii in range(100):
         yield f"#iteration: {ii}\n"
-        asyncio.sleep(2)
+        await asyncio.sleep(2)
     
 
 
